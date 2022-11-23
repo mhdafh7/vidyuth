@@ -1,0 +1,23 @@
+@import '../../styles/colors';
+.container {
+    height: 5rem;
+    // background-color: $accent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-inline: 2rem;
+    margin-top: 1rem;
+    border: 3px solid $accent;
+
+    .navItems{
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+
+      li{
+        font-weight: 600;
+      }
+    }
+
+}
