@@ -1,0 +1,29 @@
+@import "../../styles/colors";
+
+.container{
+  background-color: $bg-footer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+
+  .socials{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    h4{
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
+
+    ul{
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+
+    }
+
+  }
+}
