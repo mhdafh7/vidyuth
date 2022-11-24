@@ -8,11 +8,11 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
     return (
-        <>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
             <Navbar />
             <main>{children}</main>
             <Footer />
-        </>
+        </div>
     );
 };
 export default Layout;
