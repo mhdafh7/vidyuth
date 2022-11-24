@@ -1,0 +1,36 @@
+@import '/styles/colors';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border: 3px $accent solid;
+    margin-inline: 2rem;
+    gap: 2rem;
+
+    p {
+        color: $accent;
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+        line-height: 1.5em;
+        width: clamp(30ch, 70%, 80ch);
+        font-weight: 600;
+    }
+    .aboutLogo {
+        position: relative;
+        height: 350px;
+        width: 350px;
+        .img {
+            object-fit: contain;
+        }
+    }
+    @media (max-width: 870px) {
+        flex-direction: column;
+        padding-inline: 1rem;
+
+        p {
+            width: 100%;
+        }
+    }
+}
