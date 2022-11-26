@@ -8,7 +8,15 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+        <div
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '3rem',
+                justifyContent: 'space-between',
+                minHeight:'100vh'
+            }}
+        >
             <Navbar />
             <main>{children}</main>
             <Footer />
