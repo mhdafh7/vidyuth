@@ -6,6 +6,11 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
+    background-color: #000;
+    opacity: 1;
+    background-image: linear-gradient(#003e38 1px, transparent 1px),
+        linear-gradient(to right, #003e38 1px, #000 1px);
+    background-size: 20px 20px;
 }
 
 a {
@@ -13,10 +18,10 @@ a {
     text-decoration: none;
 }
 
-*{
-  padding:0%;
-  margin:0%;
-  box-sizing:border-box;
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +30,6 @@ a {
     }
     body {
         color: $primary-text;
-        background: $bg;
+        // background: $bg;
     }
 }
