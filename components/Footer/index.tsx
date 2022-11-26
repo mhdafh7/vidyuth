@@ -32,8 +32,8 @@ const Footer = () => {
                 <Image
                     src="/footer-logo.png"
                     alt="Vidyuth Logo"
-                    width={500}
-                    height={500}
+                    width={400}
+                    height={400}
                 />
             </div>
         </div>
