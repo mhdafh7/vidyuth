@@ -8,9 +8,10 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: #000;
     opacity: 1;
-    background-image: linear-gradient(#003e38 1px, transparent 1px),
-        linear-gradient(to right, #003e38 1px, #000 1px);
+    background-image: linear-gradient(#00322dc2 1px, transparent 1px),
+        linear-gradient(to right, #00322dc2 1px, #000 1px);
     background-size: 20px 20px;
+    color: $primary-text;
 }
 
 a {
@@ -24,12 +25,4 @@ a {
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-    body {
-        color: $primary-text;
-        // background: $bg;
-    }
-}
+
