@@ -9,6 +9,8 @@
     margin-inline: 2rem;
     gap: 2rem;
 
+    backdrop-filter: blur(10px);
+
     p {
         color: $accent;
         font-size: 1.5rem;
