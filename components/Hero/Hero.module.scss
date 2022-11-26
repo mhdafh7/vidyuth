@@ -1,0 +1,26 @@
+@import '../../styles/colors';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    margin-bottom: 3rem;
+
+    .counterContainer {
+        padding-block: 3rem;
+        font-size: clamp(3rem, 1rem + 11vw, 10rem);
+        font-weight: 800;
+
+        // span {
+        // }
+        // .days {
+        // }
+        // .hours {
+        // }
+        // .minutes {
+        // }
+        // .seconds {
+        // }
+    }
+}
