@@ -15,9 +15,8 @@ const Hero = () => {
         seconds: 0,
     });
 
-    const d = new Date(2022, 11, 16, 10, 0, 0, 0);
+    const d: any = new Date(2022, 11, 16, 10, 0, 0, 0);
     setInterval(() => {
-
         let noice = new Date(d - Date.now());
         setStuff({
             days: noice.getDate(),
