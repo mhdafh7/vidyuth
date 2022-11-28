@@ -1,5 +1,5 @@
 import styles from './events.module.scss';
-import { dayOneEvents, dayTwoEvents } from './eventsList';
+import { dayOneEvents, dayTwoEvents } from '../../constants/constants';
 
 const Events = () => {
     type EventProps = {
