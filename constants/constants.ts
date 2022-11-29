@@ -116,3 +116,11 @@ export const dayTwoEvents = [
   },
 
 ]
+
+// Coordinators Contact details
+
+export const contactDetails = [
+  { id: 1, name: "Faiz Muhammed", phone: 9656490548, mail: "faizmohammedpp@gmail.com" },
+  { id: 2, name: "Abhiram Hareendran", phone: 8129260702, mail: "abhiramlhareendran.official@gmail.com" },
+  { id: 3, name: "Mereena Thomas", phone: 8129348615, mail: "mereenat513@gmail.com" }
+]
