@@ -13,8 +13,12 @@ const Contact = () => {
             <div className={styles.cardContainer}>
                 <div className={styles.name}>{name}</div>
                 <div className={styles.details}>
-                    <div className={styles.phone}>+91 {phone}</div>
-                    <div className={styles.mail}>{mail}</div>
+                    <a href={`tel:${phone}`}>
+                        <div className={styles.phone}>+91 {phone}</div>
+                    </a>
+                    <a href={`mailto:${mail}`}>
+                        <div className={styles.mail}>{mail}</div>
+                    </a>
                 </div>
             </div>
         );
@@ -35,16 +39,16 @@ const Contact = () => {
             <div className={styles.container}>
                 <h3>Contact Us</h3>
                 <div className={styles.cardWrapper}>
-                  {contactDetails.map(({ id, name, phone, mail }) => {
-                      return (
-                          <Card
-                              key={id}
-                              name={name}
-                              phone={phone}
-                              mail={mail}
-                          />
-                      );
-                  })}
+                    {contactDetails.map(({ id, name, phone, mail }) => {
+                        return (
+                            <Card
+                                key={id}
+                                name={name}
+                                phone={phone}
+                                mail={mail}
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </>
