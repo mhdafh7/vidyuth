@@ -1,5 +1,6 @@
 import styles from './events.module.scss';
 import { dayOneEvents, dayTwoEvents } from '../../constants/constants';
+import Head from 'next/head';
 
 const Events = () => {
     type EventProps = {
@@ -22,37 +23,50 @@ const Events = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <h3>Events</h3>
-            <h4 className={styles.dayTitle}>Day One - 16th Dec</h4>
-            <div className={styles.cardsContainer}>
-                {dayOneEvents.map(({ id, title, time, description }) => {
-                    return (
-                        <Card
-                            key={id}
-                            id={id}
-                            title={title}
-                            time={time}
-                            description={description}
-                        />
-                    );
-                })}
+        <>
+            <Head>
+                <title>Events</title>
+                <meta
+                    name="description"
+                    content="Events on Vidyuth 2022 Day 1 & 2"
+                />
+                <link
+                    rel="icon"
+                    href="/favicon.ico"
+                />
+            </Head>
+            <div className={styles.container}>
+                <h3>Events</h3>
+                <h4 className={styles.dayTitle}>Day One - 16th Dec</h4>
+                <div className={styles.cardsContainer}>
+                    {dayOneEvents.map(({ id, title, time, description }) => {
+                        return (
+                            <Card
+                                key={id}
+                                id={id}
+                                title={title}
+                                time={time}
+                                description={description}
+                            />
+                        );
+                    })}
+                </div>
+                <h4 className={styles.dayTitle}>Day Two - 17th Dec</h4>
+                <div className={styles.cardsContainer}>
+                    {dayTwoEvents.map(({ id, title, time, description }) => {
+                        return (
+                            <Card
+                                key={id}
+                                id={id}
+                                title={title}
+                                time={time}
+                                description={description}
+                            />
+                        );
+                    })}
+                </div>
             </div>
-            <h4 className={styles.dayTitle}>Day Two - 17th Dec</h4>
-            <div className={styles.cardsContainer}>
-                {dayTwoEvents.map(({ id, title, time, description }) => {
-                    return (
-                        <Card
-                            key={id}
-                            id={id}
-                            title={title}
-                            time={time}
-                            description={description}
-                        />
-                    );
-                })}
-            </div>
-        </div>
+        </>
     );
 };
 export default Events;
