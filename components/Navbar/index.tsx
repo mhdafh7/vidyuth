@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className={styles.container}>
             <Link href="/">
                 <Image
-                    src="/vidyuth-logo.png"
+                    src="/transparent-v.png"
                     alt="vidyuth logo"
                     width={32}
                     height={32}

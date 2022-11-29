@@ -6,7 +6,7 @@ const About = () => {
         <div className={styles.container}>
             <div className={styles.aboutLogo}>
                 <Image
-                    src="/vidyuth-logo.png"
+                    src="/transparent-v.png"
                     alt="Vidyuth logo"
                     className={styles.img}
                     // width={400}
