@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <>
             <nav className={styles.container}>
-                <Link href="/">
+                <Link href="/" className={styles.homeLogo}>
                     <Image
                         src="/transparent-v.png"
                         alt="vidyuth logo"

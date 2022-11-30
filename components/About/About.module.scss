@@ -18,6 +18,8 @@
         line-height: 1.5em;
         width: clamp(30ch, 70%, 80ch);
         font-weight: 600;
+        font-family: 'Inter Tight', sans-serif;
+        letter-spacing: 2px;
     }
     .aboutLogo {
         position: relative;
@@ -33,6 +35,11 @@
 
         p {
             width: 100%;
+            text-align: justify;
+            letter-spacing: normal;
         }
+    }
+    @media (max-width: 619px) {
+        margin-inline: 0.4rem;
     }
 }

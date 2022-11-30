@@ -11,7 +11,7 @@
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        margin-top: 3rem;
+        margin-top: 1rem;
 
         h4 {
             font-size: 2rem;
@@ -24,14 +24,37 @@
             list-style: none;
             justify-content: baseline;
             align-items: center;
+
+            li {
+                transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+    .logo {
+        height: 20rem;
+        width: 20rem;
+        position: relative;
+        translate: -1rem;
+
+        img {
+            object-fit: contain;
         }
     }
     @media (max-width: 870px) {
         & {
             flex-direction: column;
             padding-top: 3rem;
-            
-            ul{
+            .socials {
+                h4 {
+                    text-align: center;
+                }
+            }
+
+            ul {
                 justify-content: center;
             }
         }
