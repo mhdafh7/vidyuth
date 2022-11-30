@@ -24,16 +24,16 @@ const Hero = () => {
             minutes: noice.getMinutes(),
             seconds: noice.getSeconds(),
         });
-        // console.log(stuff);
     }, 1000);
 
+    const padZero = (n: number) => n.toString().padStart(2, '0');
     return (
         <div className={styles.container}>
             <div className={styles.counterContainer}>
-                <span className={styles.days}>{stuff.days}</span>:
-                <span className={styles.hours}>{stuff.hours}</span>:
-                <span className={styles.minutes}>{stuff.minutes}</span>:
-                <span className={styles.seconds}>{stuff.seconds}</span>
+                <span className={styles.days}>{padZero(stuff.days)}</span>:
+                <span className={styles.hours}>{padZero(stuff.hours)}</span>:
+                <span className={styles.minutes}>{padZero(stuff.minutes)}</span>:
+                <span className={styles.seconds}>{padZero(stuff.seconds)}</span>
             </div>
         </div>
     );
