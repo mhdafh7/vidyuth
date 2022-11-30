@@ -25,6 +25,9 @@
     }
 
     @media (max-width: 619px) {
+        &{
+          margin: 0.4rem;
+        }
         .navItems,
         .ritLogo {
             display: none;
