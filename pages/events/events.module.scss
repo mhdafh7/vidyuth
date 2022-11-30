@@ -45,7 +45,7 @@
             transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 
             &:hover {
-                translate: -10px -10px;
+                scale: 1.05;
             }
 
             .title {
