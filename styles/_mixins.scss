@@ -1,0 +1,5 @@
+@mixin pageHeading {
+    margin-bottom: 2rem;
+    font-size: clamp(2rem, 1rem + 7vw, 4rem);
+    text-align: center;
+}
