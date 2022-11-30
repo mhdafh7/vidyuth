@@ -124,3 +124,13 @@ export const contactDetails = [
   { id: 2, name: "Abhiram Hareendran", phone: 8129260702, mail: "abhiramlhareendran.official@gmail.com" },
   { id: 3, name: "Mereena Thomas", phone: 8129348615, mail: "mereenat513@gmail.com" }
 ]
+
+// Collaborators details
+
+export const collaboratorsDetails = [
+  { id: 1, name: "EEE Association", img: "/EEE association.png" },
+  { id: 2, name: "IEDC RIT", img: "/IEDC.png" },
+  { id: 3, name: "ISTE RIT", img: "/ISTE.png" },
+  { id: 4, name: "IEEE SB RIT", img: "/IEEE_SB_RIT.png" },
+  { id: 5, name: "Hoopers RIT", img: "/Hoopers_RIT.jpg" },
+]

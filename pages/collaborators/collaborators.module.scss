@@ -1,0 +1,30 @@
+@import "../../styles/colors";
+@import '../../styles/mixins';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    
+    h3 {
+        @include pageHeading;
+    }
+    .imgContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+
+        .imgWrapper {
+            position: relative;
+            width: 10rem;
+            height: 10rem;
+            padding: 1rem;
+
+            .img{
+              object-fit: contain;
+            }
+        }
+    }
+}
