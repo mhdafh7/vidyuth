@@ -9,15 +9,107 @@
     margin-top: 1rem;
     border: 3px solid $accent;
     backdrop-filter: blur(10px);
+    z-index: 999;
 
-    .navItems{
-      list-style: none;
-      display: flex;
-      gap: 2rem;
+    .navItems {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
 
-      li{
-        font-weight: 600;
-      }
+        li {
+            font-weight: 600;
+        }
+    }
+    .mobileNavBtn {
+        display: none;
     }
 
+    @media (max-width: 619px) {
+        .navItems,
+        .ritLogo {
+            display: none;
+        }
+    }
+    @media (max-width: 619px) {
+        .mobileNavBtn {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 3em;
+            height: 2em;
+            background: transparent;
+            border: none;
+
+            span {
+                content: '';
+                width: 90%;
+                height: 2px;
+                background-color: $primary-text;
+            }
+        }
+    }
+}
+.mobileNavOverlay {
+    display: none;
+
+    @media (max-width: 619px) {
+        & {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            background-color: $bg-footer;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+
+            ul {
+                list-style: none;
+                // height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+
+                li {
+                    width: 100%;
+                    .mobileNavItem {
+                        display: inline-block;
+                        font-size: 3rem;
+                        font-weight: 800;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+            .closeBtn {
+                cursor: pointer;
+                background: transparent;
+                position: absolute;
+                height: 5rem;
+                width: 5rem;
+                left: 50%;
+                bottom: 6rem;
+                translate: -50%;
+                border: none;
+                font-size: 3rem;
+                color: $primary-text;
+                z-index: 1000;
+
+                transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                transform-origin: center;
+
+                &:hover {
+                    rotate: 180deg;
+                    scale: 1.3;
+                }
+            }
+        }
+    }
 }
