@@ -10,7 +10,7 @@ const Footer = () => {
                 <ul>
                     <li>
                         <a
-                            href="https://www.instagram.com/vidhyut.techfest/"
+                            href="https://www.instagram.com/vidyuth.techfest/"
                             target="_blank"
                             rel="noreferrer"
                         >
