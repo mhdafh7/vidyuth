@@ -4,7 +4,7 @@
 .container {
     padding-inline: 4rem;
 
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
         padding-inline: 0.4rem;
     }
 
@@ -50,12 +50,14 @@
 
             &:hover {
                 scale: 1.02;
+                color: $bg;
+                background-color: $accent;
             }
 
             .title {
                 font-size: clamp(1rem, 0.5rem + 3vw, 1.7rem);
-                font-weight: 600;
-                margin-bottom: 1rem;
+                font-weight: 700;
+                margin-bottom: 1.3rem;
             }
             .time {
                 margin-bottom: 0.4rem;
@@ -63,6 +65,7 @@
             .description {
                 opacity: 0.8;
                 font-size: 1rem;
+                font-family: 'Inter Tight', sans-serif;
             }
         }
     }
