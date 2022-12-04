@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import styles from './Navbar.module.scss';
+
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const handleClick = () => {
@@ -47,20 +49,35 @@ const Navbar = () => {
                 </a>
 
                 {/* Mobile Nav */}
-                <button
+                <motion.button
                     className={styles.mobileNavBtn}
                     onClick={handleClick}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                 >
                     <span></span>
                     <span></span>
                     <span></span>
-                </button>
+                </motion.button>
             </nav>
             {menuOpen ? (
-                <div className={styles.mobileNavOverlay}>
-                    {/* <div className={styles.mobileNavContent}> */}
+                <motion.div
+                    className={styles.mobileNavOverlay}
+                    initial={{
+                        height: 0,
+                    }}
+                    animate={{
+                        height: '100vh',
+                        transformOrigin: 'top',
+                    }}
+                >
                     <ul>
-                        <li>
+                        <motion.li
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                        >
                             <Link
                                 href="/events"
                                 className={styles.mobileNavItem}
@@ -68,8 +85,12 @@ const Navbar = () => {
                             >
                                 Event
                             </Link>
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                        >
                             <Link
                                 href="/contact"
                                 className={styles.mobileNavItem}
@@ -77,8 +98,12 @@ const Navbar = () => {
                             >
                                 Contact
                             </Link>
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                        >
                             <Link
                                 href="/collaborators"
                                 className={styles.mobileNavItem}
@@ -86,11 +111,14 @@ const Navbar = () => {
                             >
                                 Collaborators
                             </Link>
-                        </li>
+                        </motion.li>
                     </ul>
-                    <button
+                    <motion.button
                         className={styles.closeBtn}
                         onClick={handleClick}
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                     >
                         <svg
                             fill="#ffffff"
@@ -99,9 +127,8 @@ const Navbar = () => {
                         >
                             <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z" />
                         </svg>
-                    </button>
-                    {/* </div> */}
-                </div>
+                    </motion.button>
+                </motion.div>
             ) : null}
         </>
     );

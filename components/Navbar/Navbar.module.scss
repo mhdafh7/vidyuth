@@ -73,7 +73,7 @@
     @media (max-width: 619px) {
         & {
             display: flex;
-            height: 100vh;
+            // height: 100vh;
             width: 100vw;
             background-color: $bg-footer;
             position: fixed;
@@ -120,10 +120,6 @@
                 transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 transform-origin: center;
 
-                &:hover {
-                    rotate: 180deg;
-                    scale: 1.3;
-                }
             }
         }
     }
