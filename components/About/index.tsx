@@ -12,7 +12,6 @@ const About = () => {
                     // width={400}
                     // height={400}
                     fill
-                    // placeholder="blur"
                 />
             </div>
             <p>

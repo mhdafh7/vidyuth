@@ -34,7 +34,7 @@
         place-items: center;
 
         .card {
-            background-color: transparent;
+            background-color: $bg-blur;
             backdrop-filter: blur(10px);
             border: $accent 1px solid;
             display: flex;

@@ -9,6 +9,7 @@
     margin-top: 1rem;
     border: 3px solid $accent;
     backdrop-filter: blur(10px);
+    background-color: $bg-blur;
     z-index: 999;
 
     .navItems {
@@ -76,6 +77,7 @@
             // height: 100vh;
             width: 100vw;
             background-color: $bg-footer;
+            backdrop-filter: blur(50px);
             position: fixed;
             top: 50%;
             left: 50%;
