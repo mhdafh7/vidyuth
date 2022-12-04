@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Particle from './Particle';
 import { ReactNode } from 'react';
 
 interface Props {
@@ -14,11 +15,12 @@ const Layout = ({ children }: Props) => {
                 flexDirection: 'column',
                 gap: '3rem',
                 justifyContent: 'space-between',
-                minHeight:'100vh'
+                minHeight: '100vh',
             }}
         >
             <Navbar />
-            <main>{children}</main>
+            <Particle />
+            <main style={{ zIndex: 10 }}>{children}</main>
             <Footer />
         </div>
     );
