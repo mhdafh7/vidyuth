@@ -1,6 +1,25 @@
 import styles from './events.module.scss';
 import { dayOneEvents, dayTwoEvents } from '../../constants/constants';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
+
+let easing = [0.6, -0.05, 0.01, 0.99];
+
+const fadeInUp = {
+    initial: {
+        y: 60,
+        opacity: 0,
+        transition: { duration: 0.6, ease: easing },
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            ease: easing,
+        },
+    },
+};
 
 const Events = () => {
     type EventProps = {
@@ -11,14 +30,15 @@ const Events = () => {
     };
     const Card = ({ id, title, time, description }: EventProps) => {
         return (
-            <div
+            <motion.div
+                variants={fadeInUp}
                 className={styles.card}
                 key={id}
             >
                 <span className={styles.title}>{title}</span>
                 <span className={styles.time}>{time}</span>
                 <span className={styles.description}>{description}</span>
-            </div>
+            </motion.div>
         );
     };
 
@@ -35,7 +55,11 @@ const Events = () => {
                     href="/favicon.ico"
                 />
             </Head>
-            <div className={styles.container}>
+            <motion.div
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                className={styles.container}
+            >
                 <h3>Events</h3>
                 <h4 className={styles.dayTitle}>Day One - 16th Dec</h4>
                 <div className={styles.cardsContainer}>
@@ -65,7 +89,7 @@ const Events = () => {
                         );
                     })}
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 };
