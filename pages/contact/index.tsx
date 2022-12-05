@@ -1,6 +1,8 @@
 import styles from './contact.module.scss';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { contactDetails } from '../../constants/constants';
+import { useRef } from 'react';
 
 type ContactProps = {
     name: string;
@@ -8,9 +10,14 @@ type ContactProps = {
     mail: string;
 };
 const Contact = () => {
+    const constraintsRef = useRef(null);
     const Card = ({ name, phone, mail }: ContactProps) => {
         return (
-            <div className={styles.cardContainer}>
+            <motion.div
+                drag
+                dragConstraints={constraintsRef}
+                className={styles.cardContainer}
+            >
                 <div className={styles.name}>{name}</div>
                 <div className={styles.details}>
                     <a href={`tel:${phone}`}>
@@ -20,9 +27,10 @@ const Contact = () => {
                         <div className={styles.mail}>{mail}</div>
                     </a>
                 </div>
-            </div>
+            </motion.div>
         );
     };
+
     return (
         <>
             <Head>
@@ -36,8 +44,12 @@ const Contact = () => {
                     href="/favicon.ico"
                 />
             </Head>
-            <div className={styles.container}>
+            <motion.div
+                ref={constraintsRef}
+                className={styles.container}
+            >
                 <h3>Contact Us</h3>
+                <h5>Reach out to us regarding any queries</h5>
                 <div className={styles.cardWrapper}>
                     {contactDetails.map(({ id, name, phone, mail }) => {
                         return (
@@ -50,7 +62,7 @@ const Contact = () => {
                         );
                     })}
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 };

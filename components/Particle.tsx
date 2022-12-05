@@ -36,7 +36,7 @@ const Particle = () => {
                         },
                         onHover: {
                             enable: true,
-                            mode: "repulse",
+                            mode: "grab",
                         },
                         resize: true,
                     },
@@ -58,7 +58,7 @@ const Particle = () => {
                         color: "#05f2db",
                         distance: 150,
                         enable: true,
-                        opacity: 0.5,
+                        opacity: 0.3,
                         width: 1,
                     },
                     collisions: {
@@ -77,7 +77,7 @@ const Particle = () => {
                     number: {
                         density: {
                             enable: true,
-                            area: 900,
+                            area: 1400,
                         },
                         value: 80,
                     },

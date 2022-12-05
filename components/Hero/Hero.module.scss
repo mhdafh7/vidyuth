@@ -4,23 +4,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     min-height: 70vh;
     margin-bottom: 3rem;
+    text-align: center;
+    gap: 3rem;
 
-    .counterContainer {
-        padding-block: 3rem;
-        font-size: clamp(3rem, 1rem + 11vw, 10rem);
-        font-weight: 800;
+    .infoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1.5rem;
 
-        // span {
-        // }
-        // .days {
-        // }
-        // .hours {
-        // }
-        // .minutes {
-        // }
-        // .seconds {
-        // }
+        h2 {
+            font-size: clamp(4rem, 2rem + 10vw, 8rem);
+            font-weight: 800;
+        }
+        h3 {
+            font-size: clamp(1.5rem, 1rem + 4vw, 2rem);
+        }
     }
+    .btnContainer {
+        display: flex;
+        gap: 1rem;
+
+        .eventsBtn, .sponsorsBtn{
+            border: $accent 2px solid;
+            font-size: 0.9rem;
+            padding: 1rem;
+            width: 10rem;
+            background-color: $accent;
+            cursor: pointer;
+        }
+    }
+
+   
 }

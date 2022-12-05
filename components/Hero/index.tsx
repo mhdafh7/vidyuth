@@ -1,39 +1,42 @@
+import Link from 'next/link';
 import styles from './Hero.module.scss';
-import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
-    type dateProps = {
-        days: number;
-        hours: number;
-        minutes: number;
-        seconds: number;
-    };
-    const [stuff, setStuff] = useState<dateProps>({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-    });
-
-    const d: any = new Date(2022, 11, 16, 10, 0, 0, 0);
-    setInterval(() => {
-        let noice = new Date(d - Date.now());
-        setStuff({
-            days: noice.getDate(),
-            hours: noice.getHours(),
-            minutes: noice.getMinutes(),
-            seconds: noice.getSeconds(),
-        });
-    }, 1000);
-
-    const padZero = (n: number) => n.toString().padStart(2, '0');
     return (
         <div className={styles.container}>
-            <div className={styles.counterContainer}>
-                <span className={styles.days}>{padZero(stuff.days)}</span>:
-                <span className={styles.hours}>{padZero(stuff.hours)}</span>:
-                <span className={styles.minutes}>{padZero(stuff.minutes)}</span>:
-                <span className={styles.seconds}>{padZero(stuff.seconds)}</span>
+            <div className={styles.infoContainer}>
+                <h3>Dec 16,17</h3>
+                <h2>VIDYUTH 22</h2>
+                <h3>RIT, Kottayam</h3>
+            </div>
+            <div className={styles.btnContainer}>
+                <Link href="/events">
+                    <motion.button
+                        className={styles.eventsBtn}
+                        whileHover={{
+                            scale: 1.05,
+                            transition: { duration: 1 },
+                        }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                    >
+                        Events
+                    </motion.button>
+                </Link>
+                <Link href="/contact">
+                    <motion.button
+                        className={styles.sponsorsBtn}
+                        whileHover={{
+                            scale: 1.05,
+                            transition: { duration: 0.6 },
+                        }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                    >
+                        Sponsor
+                    </motion.button>
+                </Link>
             </div>
         </div>
     );
