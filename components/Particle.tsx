@@ -32,7 +32,7 @@ const Particle = () => {
                     events: {
                         onClick: {
                             enable: true,
-                            mode: "push",
+                            mode: "repulse",
                         },
                         onHover: {
                             enable: true,
@@ -59,10 +59,10 @@ const Particle = () => {
                         distance: 150,
                         enable: true,
                         opacity: 0.3,
-                        width: 1,
+                        width: 2,
                     },
                     collisions: {
-                        enable: true,
+                        enable: false,
                     },
                     move: {
                         direction: "none",
@@ -77,7 +77,7 @@ const Particle = () => {
                     number: {
                         density: {
                             enable: true,
-                            area: 1400,
+                            area: 1700,
                         },
                         value: 80,
                     },

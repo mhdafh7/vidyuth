@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { menuItems } from '../../constants/constants';
+import MenuItem from './MenuItem';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -9,6 +11,7 @@ const Navbar = () => {
     const handleClick = () => {
         setMenuOpen(!menuOpen);
     };
+
     return (
         <>
             <nav className={styles.container}>
@@ -24,15 +27,16 @@ const Navbar = () => {
                     />
                 </Link>
                 <ul className={styles.navItems}>
-                    <Link href="/events">
-                        <li>Events</li>
-                    </Link>
-                    <Link href="/contact">
-                        <li>Contact</li>
-                    </Link>
-                    <Link href="/collaborators">
-                        <li>Collaborators</li>
-                    </Link>
+                    {menuItems.map(({ url, title }) => {
+                        return (
+                            <Link
+                                href={`${url}`}
+                                key={url}
+                            >
+                                <li>{title}</li>
+                            </Link>
+                        );
+                    })}
                 </ul>
                 <a
                     href="http://www.rit.ac.in/"
@@ -72,47 +76,18 @@ const Navbar = () => {
                         transformOrigin: 'top',
                     }}
                 >
-                    <ul>
-                        <motion.li
-                            whileHover={{ scale: 1.2 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                        >
-                            <Link
-                                href="/events"
-                                className={styles.mobileNavItem}
-                                onClick={handleClick}
-                            >
-                                Event
-                            </Link>
-                        </motion.li>
-                        <motion.li
-                            whileHover={{ scale: 1.2 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                        >
-                            <Link
-                                href="/contact"
-                                className={styles.mobileNavItem}
-                                onClick={handleClick}
-                            >
-                                Contact
-                            </Link>
-                        </motion.li>
-                        <motion.li
-                            whileHover={{ scale: 1.2 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                        >
-                            <Link
-                                href="/collaborators"
-                                className={styles.mobileNavItem}
-                                onClick={handleClick}
-                            >
-                                Collaborators
-                            </Link>
-                        </motion.li>
-                    </ul>
+                    <motion.ul transition={{ staggerChildren: 0.08, delayChildren: 0.2 }}>
+                        {menuItems.map(({ url, title }) => {
+                            return (
+                                <MenuItem
+                                    key={url}
+                                    url={url}
+                                    title={title}
+                                    handleClick={handleClick}
+                                />
+                            );
+                        })}
+                    </motion.ul>
                     <motion.button
                         className={styles.closeBtn}
                         onClick={handleClick}

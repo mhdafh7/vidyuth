@@ -2,7 +2,6 @@ import styles from './contact.module.scss';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { contactDetails } from '../../constants/constants';
-import { useRef } from 'react';
 
 type ContactProps = {
     name: string;
@@ -36,12 +35,11 @@ const fadeInUp = {
 };
 
 const Contact = () => {
-    const constraintsRef = useRef(null);
     const Card = ({ name, phone, mail }: ContactProps) => {
         return (
             <motion.div
                 drag
-                dragConstraints={constraintsRef}
+                dragConstraints={{ top: -0, left: -0, right: 0, bottom: 0 }}
                 className={styles.cardContainer}
             >
                 <div className={styles.name}>{name}</div>
@@ -70,13 +68,12 @@ const Contact = () => {
                     href="/favicon.ico"
                 />
             </Head>
-            <motion.div
-                ref={constraintsRef}
-                className={styles.container}
-            >
+            <motion.div className={styles.container}>
                 <h3>Contact Us</h3>
                 <h5>Reach out to us regarding any queries</h5>
-                <div className={styles.cardWrapper}>
+                <motion.div
+                    className={styles.cardWrapper}
+                >
                     {contactDetails.map(({ id, name, phone, mail }) => {
                         return (
                             <Card
@@ -87,7 +84,7 @@ const Contact = () => {
                             />
                         );
                     })}
-                </div>
+                </motion.div>
             </motion.div>
         </>
     );

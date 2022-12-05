@@ -16,6 +16,7 @@
         justify-content: space-between;
         flex-direction: column;
         gap: 1.5rem;
+        padding-inline: 0.6rem;
 
         h2 {
             font-size: clamp(4rem, 2rem + 10vw, 8rem);
@@ -31,7 +32,8 @@
 
         .eventsBtn, .sponsorsBtn{
             border: $accent 2px solid;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 500;
             padding: 1rem;
             width: 10rem;
             background-color: $accent;

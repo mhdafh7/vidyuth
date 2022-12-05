@@ -1,3 +1,18 @@
+// Mobile Menu Items
+export const menuItems = [
+  {
+    url:"events",
+    title:"Events"
+  },
+  {
+    url:"contact",
+    title:"Contact"
+  },
+  {
+    url:"collaborators",
+    title:"Collaborators"
+  },
+]
 // Day one events
 export const dayOneEvents = [
   {
