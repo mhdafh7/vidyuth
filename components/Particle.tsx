@@ -24,7 +24,7 @@ const Particle = () => {
             options={{
                 background: {
                     color: {
-                        value: "#112739",
+                        value: "#071413",
                     },
                 },
                 fpsLimit: 120,
@@ -42,7 +42,7 @@ const Particle = () => {
                     },
                     modes: {
                         push: {
-                            quantity: 4,
+                            quantity: 3,
                         },
                         repulse: {
                             distance: 200,
@@ -85,7 +85,7 @@ const Particle = () => {
                         value: 0.5,
                     },
                     shape: {
-                        type: "circle",
+                        type: "triangle",
                     },
                     size: {
                         value: { min: 1, max: 5 },
