@@ -16,6 +16,7 @@
         justify-content: space-between;
         flex-direction: column;
         gap: 1.5rem;
+        padding-inline: 0.6rem;
 
         h2 {
             font-size: clamp(4rem, 2rem + 10vw, 8rem);

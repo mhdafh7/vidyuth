@@ -2,7 +2,6 @@ import styles from './contact.module.scss';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { contactDetails } from '../../constants/constants';
-import { useRef } from 'react';
 
 type ContactProps = {
     name: string;
@@ -10,7 +9,6 @@ type ContactProps = {
     mail: string;
 };
 const Contact = () => {
-    // const constraintsRef = useRef(null);
     const Card = ({ name, phone, mail }: ContactProps) => {
         return (
             <motion.div
@@ -48,7 +46,6 @@ const Contact = () => {
                 <h3>Contact Us</h3>
                 <h5>Reach out to us regarding any queries</h5>
                 <motion.div
-                    // ref={constraintsRef}
                     className={styles.cardWrapper}
                 >
                     {contactDetails.map(({ id, name, phone, mail }) => {
