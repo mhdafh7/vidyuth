@@ -10,12 +10,12 @@ type ContactProps = {
     mail: string;
 };
 const Contact = () => {
-    // const constraintsRef = useRef(null);
+    const constraintsRef = useRef(null);
     const Card = ({ name, phone, mail }: ContactProps) => {
         return (
             <motion.div
-                // drag
-                // dragConstraints={constraintsRef}
+                drag
+                dragConstraints={constraintsRef}
                 className={styles.cardContainer}
             >
                 <div className={styles.name}>{name}</div>
@@ -44,13 +44,13 @@ const Contact = () => {
                     href="/favicon.ico"
                 />
             </Head>
-            <motion.div
-                // ref={constraintsRef}
-                className={styles.container}
-            >
+            <motion.div className={styles.container}>
                 <h3>Contact Us</h3>
                 <h5>Reach out to us regarding any queries</h5>
-                <div className={styles.cardWrapper}>
+                <motion.div
+                    ref={constraintsRef}
+                    className={styles.cardWrapper}
+                >
                     {contactDetails.map(({ id, name, phone, mail }) => {
                         return (
                             <Card
@@ -61,7 +61,7 @@ const Contact = () => {
                             />
                         );
                     })}
-                </div>
+                </motion.div>
             </motion.div>
         </>
     );
