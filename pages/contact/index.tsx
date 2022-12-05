@@ -13,7 +13,7 @@ const Contact = () => {
         return (
             <motion.div
                 drag
-                dragConstraints={{ top: -50, left: -50, right: 50, bottom: 50 }}
+                dragConstraints={{ top: -0, left: -0, right: 0, bottom: 0 }}
                 className={styles.cardContainer}
             >
                 <div className={styles.name}>{name}</div>
