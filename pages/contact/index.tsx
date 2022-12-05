@@ -10,12 +10,12 @@ type ContactProps = {
     mail: string;
 };
 const Contact = () => {
-    const constraintsRef = useRef(null);
+    // const constraintsRef = useRef(null);
     const Card = ({ name, phone, mail }: ContactProps) => {
         return (
             <motion.div
-                drag
-                dragConstraints={constraintsRef}
+                // drag
+                // dragConstraints={constraintsRef}
                 className={styles.cardContainer}
             >
                 <div className={styles.name}>{name}</div>
@@ -45,7 +45,7 @@ const Contact = () => {
                 />
             </Head>
             <motion.div
-                ref={constraintsRef}
+                // ref={constraintsRef}
                 className={styles.container}
             >
                 <h3>Contact Us</h3>
