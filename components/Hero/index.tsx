@@ -11,7 +11,7 @@ const Hero = () => {
                 <h3>RIT, Kottayam</h3>
             </div>
             <div className={styles.btnContainer}>
-                <Link href="/events">
+                {/* <Link href="/events">
                     <motion.button
                         className={styles.eventsBtn}
                         whileHover={{
@@ -36,7 +36,20 @@ const Hero = () => {
                     >
                         Sponsor
                     </motion.button>
-                </Link>
+                </Link> */}
+                <motion.a
+                    href="https://forms.gle/7FGaktE2oqb8xZQHA"
+                    target="_blank"
+                    className={styles.regBtn}
+                    whileHover={{
+                        scale: 1.05,
+                        transition: { duration: 0.6 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                >
+                    Register as Ambassador
+                </motion.a>
             </div>
         </div>
     );

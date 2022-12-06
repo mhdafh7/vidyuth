@@ -30,13 +30,24 @@
         display: flex;
         gap: 1rem;
 
-        .eventsBtn, .sponsorsBtn{
+        // .eventsBtn, .sponsorsBtn{
+        //     border: $accent 2px solid;
+        //     font-size: 1rem;
+        //     font-weight: 500;
+        //     padding: 1rem;
+        //     width: 10rem;
+        //     background-color: $accent;
+        //     color: $bg;
+        //     cursor: pointer;
+        // }
+        .regBtn{
             border: $accent 2px solid;
             font-size: 1rem;
             font-weight: 500;
             padding: 1rem;
-            width: 10rem;
+            // width: 10rem;
             background-color: $accent;
+            color: $bg;
             cursor: pointer;
         }
     }
