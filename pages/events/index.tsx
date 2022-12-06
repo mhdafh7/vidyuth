@@ -20,6 +20,13 @@ const fadeInUp = {
         },
     },
 };
+const stagger = {
+    animate: {
+        transition: {
+            staggerChildren: 0.3,
+        },
+    },
+};
 
 const Events = () => {
     type EventProps = {
@@ -62,7 +69,10 @@ const Events = () => {
             >
                 <h3>Events</h3>
                 <h4 className={styles.dayTitle}>Day One - 16th Dec</h4>
-                <div className={styles.cardsContainer}>
+                <motion.div
+                    className={styles.cardsContainer}
+                    variants={stagger}
+                >
                     {dayOneEvents.map(({ id, title, time, description }) => {
                         return (
                             <Card
@@ -74,7 +84,7 @@ const Events = () => {
                             />
                         );
                     })}
-                </div>
+                </motion.div>
                 <h4 className={styles.dayTitle}>Day Two - 17th Dec</h4>
                 <div className={styles.cardsContainer}>
                     {dayTwoEvents.map(({ id, title, time, description }) => {

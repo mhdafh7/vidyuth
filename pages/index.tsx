@@ -21,6 +21,7 @@ export default function Home() {
             initial="initial"
             animate="animate"
             exit={{ opacity: 0 }}
+            variants={stagger}
         >
             <Head>
                 <title>Vidyuth - Explore-Create-Inspire</title>

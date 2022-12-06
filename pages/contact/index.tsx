@@ -13,7 +13,7 @@ let easing = [0.6, -0.05, 0.01, 0.99];
 const stagger = {
     animate: {
         transition: {
-            staggerChildren: 0.05,
+            staggerChildren: 0.13,
         },
     },
 };
@@ -40,6 +40,7 @@ const Contact = () => {
             <motion.div
                 drag
                 dragConstraints={{ top: -0, left: -0, right: 0, bottom: 0 }}
+                variants={fadeInUp}
                 className={styles.cardContainer}
             >
                 <div className={styles.name}>{name}</div>
@@ -68,11 +69,17 @@ const Contact = () => {
                     href="/favicon.ico"
                 />
             </Head>
-            <motion.div className={styles.container}>
+            <motion.div
+                className={styles.container}
+                initial="initial"
+                animate="animate"
+                exit={{ opacity: 0 }}
+            >
                 <h3>Contact Us</h3>
                 <h5>Reach out to us regarding any queries</h5>
                 <motion.div
                     className={styles.cardWrapper}
+                    variants={stagger}
                 >
                     {contactDetails.map(({ id, name, phone, mail }) => {
                         return (
