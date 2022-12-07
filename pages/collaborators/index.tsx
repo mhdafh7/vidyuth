@@ -50,6 +50,21 @@ const Collaborators = () => {
                 animate="animate"
                 exit={{ opacity: 0 }}
             >
+                <h3>Technical Sponsor</h3>
+                <motion.div className={styles.imgContainer}>
+                    <motion.div
+                        variants={fadeInUp}
+                        className={styles.imgWrapper}
+                        style={{ scale: 1.5 }}
+                    >
+                        <Image
+                            src="/Schneider_Electric.png"
+                            fill
+                            alt="Schneider Electric"
+                            className={styles.img}
+                        />
+                    </motion.div>
+                </motion.div>
                 <h3>Collaborators</h3>
                 <motion.div
                     variants={stagger}
