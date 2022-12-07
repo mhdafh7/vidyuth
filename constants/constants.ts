@@ -143,6 +143,7 @@ export const contactDetails = [
 // Collaborators details
 
 export const collaboratorsDetails = [
+  {id:0,name:"Schneider Electric",img:"/Schneider_Electric.png"},
   { id: 1, name: "EEE Association", img: "/EEE association.png" },
   { id: 2, name: "IEDC RIT", img: "/IEDC.png" },
   { id: 3, name: "ISTE RIT", img: "/ISTE.png" },
