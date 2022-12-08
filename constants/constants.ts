@@ -16,6 +16,12 @@ export const menuItems = [
 // Day one events
 export const dayOneEvents = [
   {
+    id: 0,
+    title: "Schneider",
+    time: "9:00 am - 4:00 pm",
+    description: "An opportunity to meet the global specialist in energy management and automation - Schneider Electric."
+  },
+  {
     id: 1,
     title: "ISRO Expo",
     time: "9:00 am - 4:00 pm",
