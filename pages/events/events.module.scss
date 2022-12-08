@@ -34,9 +34,6 @@
         place-items: center;
 
         .card {
-            background-color: $bg-blur;
-            backdrop-filter: blur(10px);
-            border: $accent 1px solid;
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
@@ -46,12 +43,16 @@
             margin: auto;
             cursor: pointer;
             height: 300px;
+            color: $bg;
+            background-color: $accent;
+            border: $accent 2px solid;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
             &:hover {
                 scale: 1.02;
-                color: $bg;
-                background-color: $accent;
+                color: $accent;
+                background-color: $bg-blur;
+                backdrop-filter: blur(10px);
             }
 
             .title {
