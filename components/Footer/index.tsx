@@ -19,7 +19,7 @@ const Footer = () => {
                     </li>
                     <li>
                         <a
-                            href="https://m.facebook.com/profile.php?id=100087564614101"
+                            href="https://www.facebook.com/Eniac16?mibextid=ZbWKwL"
                             target="_blank"
                             rel="noreferrer"
                         >
